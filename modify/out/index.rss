@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>nginx news</title><link>http://nginx.org</link><description/><item><title>njs-0.8.7
+bugfix version has been
+released.
+</title><guid>http://nginx.org/#2024-10-22</guid><link>http://nginx.org/#2024-10-22</link><pubDate>Tue, 22 Oct 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-10-22<p><a href="en/docs/njs/index.html">njs-0.8.7</a>
+bugfix version has been
+<a href="en/docs/njs/changes.html#njs0.8.7">released</a>.
+</p>]]></description></item><item><title>nginx-1.27.2
+mainline version has been released.
+</title><guid>http://nginx.org/#2024-10-02</guid><link>http://nginx.org/#2024-10-02</link><pubDate>Wed, 02 Oct 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-10-02<p><a href="en/download.html">nginx-1.27.2</a>
+mainline version has been released.
+</p>]]></description></item><item><title>njs-0.8.6
+version has been
+released,
+featuring the QuickJS engine support.
+</title><guid>http://nginx.org/#2024-10-02</guid><link>http://nginx.org/#2024-10-02</link><pubDate>Wed, 02 Oct 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-10-02<p><a href="en/docs/njs/index.html">njs-0.8.6</a>
+version has been
+<a href="en/docs/njs/changes.html#njs0.8.6">released</a>,
+featuring the <a href="en/docs/njs/engine.html">QuickJS</a> engine support.
+</p>]]></description></item><item><title>
+The nginx project
+has officially
+moved
+to
+GitHub.
+Use
+GitHub issues
+instead of trac.nginx.org,
+GitHub discussions
+instead of nginx mailing list.
+</title><guid>http://nginx.org/#2024-09-06</guid><link>http://nginx.org/#2024-09-06</link><pubDate>Fri, 06 Sep 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-09-06<p>
+The <a href="en/index.html">nginx</a> project
+has officially
+<a href="https://mailman.nginx.org/pipermail/nginx/2024-September/R7KBUUNTG3B2QAAMPS6M7YDOSVCMOZD7.html">moved</a>
+to
+<a href="https://github.com/nginx/nginx">GitHub</a>.
+Use
+<a href="https://github.com/nginx/nginx/issues">GitHub issues</a>
+instead of <a href="http://trac.nginx.org">trac.nginx.org</a>,
+<a href="https://github.com/nginx/nginx/discussions">GitHub discussions</a>
+instead of nginx mailing list.
+</p>]]></description></item><item><title>nginx-1.26.2
+stable and
+nginx-1.27.1
+mainline versions have been released,
+with a fix for the
+buffer overread
+vulnerability in the ngx_http_mp4_module (CVE-2024-7347).
+</title><guid>http://nginx.org/#2024-08-14</guid><link>http://nginx.org/#2024-08-14</link><pubDate>Wed, 14 Aug 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-08-14<p><a href="en/download.html">nginx-1.26.2</a>
+stable and
+<a href="en/download.html">nginx-1.27.1</a>
+mainline versions have been released,
+with a fix for the
+<a href="en/security_advisories.html">buffer overread</a>
+vulnerability in the ngx_http_mp4_module (CVE-2024-7347).
+</p>]]></description></item><item><title>njs-0.8.5
+version has been
+released.
+</title><guid>http://nginx.org/#2024-06-25</guid><link>http://nginx.org/#2024-06-25</link><pubDate>Tue, 25 Jun 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-06-25<p><a href="en/docs/njs/index.html">njs-0.8.5</a>
+version has been
+<a href="en/docs/njs/changes.html#njs0.8.5">released</a>.
+</p>]]></description></item><item><title>
+The njs project has officially moved to
+GitHub.
+Read more.
+</title><guid>http://nginx.org/#2024-06-05</guid><link>http://nginx.org/#2024-06-05</link><pubDate>Wed, 05 Jun 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-06-05<p>
+The <a href="en/docs/njs/index.html">njs</a> project has officially moved to
+<a href="https://github.com/nginx/njs">GitHub</a>.
+<a href="https://mailman.nginx.org/pipermail/nginx/2024-June/WBTVAEMFIOQDL3VEBP7Z65Q4E56T73L6.html">Read more</a>.
+</p>]]></description></item><item><title>nginx-1.26.1
+stable and
+nginx-1.27.0
+mainline versions have been released,
+with fixes for
+vulnerabilities in HTTP/3
+(CVE-2024-32760, CVE-2024-31079, CVE-2024-35200, CVE-2024-34161).
+</title><guid>http://nginx.org/#2024-05-29</guid><link>http://nginx.org/#2024-05-29</link><pubDate>Wed, 29 May 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-05-29<p><a href="en/download.html">nginx-1.26.1</a>
+stable and
+<a href="en/download.html">nginx-1.27.0</a>
+mainline versions have been released,
+with fixes for
+<a href="en/security_advisories.html">vulnerabilities in HTTP/3</a>
+(CVE-2024-32760, CVE-2024-31079, CVE-2024-35200, CVE-2024-34161).
+</p>]]></description></item><item><title>
+The nginx.org website project
+has officially
+moved
+to GitHub.
+</title><guid>http://nginx.org/#2024-05-13</guid><link>http://nginx.org/#2024-05-13</link><pubDate>Mon, 13 May 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-05-13<p>
+The <a href="en/docs/index.html">nginx.org</a> website project
+has officially
+<a href="https://mailman.nginx.org/pipermail/nginx/2024-May/XFU2YUN4OU2UFH4OND4NKZI35KL22Q54.html">moved</a>
+to <a href="https://github.com/nginx/nginx.org">GitHub</a>.
+</p>]]></description></item><item><title>nginx-1.26.0
+stable version has been released,
+incorporating new features and bug fixes from the 1.25.x mainline branch  — 
+including experimental
+HTTP/3 support,
+HTTP/2 on a
+
+per-server basis,
+virtual
+servers
+in the stream module,
+passing
+stream connections to listen sockets,
+and more.
+</title><guid>http://nginx.org/#2024-04-23</guid><link>http://nginx.org/#2024-04-23</link><pubDate>Tue, 23 Apr 2024 00:00:00 +0300</pubDate><description><![CDATA[2024-04-23<p><a href="en/download.html">nginx-1.26.0</a>
+stable version has been released,
+incorporating new features and bug fixes from the 1.25.x mainline branch  — 
+including experimental
+<a href="en/docs/http/ngx_http_v3_module.html">HTTP/3 support</a>,
+HTTP/2 on a
+<a href="en/docs/http/ngx_http_v2_module.html#http2">
+per-server</a> basis,
+<a href="en/docs/stream/ngx_stream_core_module.html#server_name">virtual
+servers</a>
+in the stream module,
+<a href="en/docs/stream/ngx_stream_pass_module.html">passing</a>
+stream connections to listen sockets,
+and more.
+</p>]]></description></item></channel></rss>

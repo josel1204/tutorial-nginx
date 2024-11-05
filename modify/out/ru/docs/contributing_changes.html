@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Внесение изменений</title><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../../css/style_ru.css"></head><body><div id="banner"><div id="banner-content">
+
+Celebrating <a href="https://github.com/nginx/nginx/commit/0e8348c50">20 years</a>
+of nginx!
+Read about our journey and milestones in the
+<a href="https://blog.nginx.org/blog/celebrating-20-years-of-nginx">latest blog</a>.
+
+</div></div><div id="main"><div id="menu"><input class="side-menu" type="checkbox" id="side-menu"><label class="hamb" for="side-menu"><span class="hamb-line"></span></label><nav class="nav"><h1><a href="/"><img src="/img/nginx_logo.png" alt="NGINX" class="lightimage" style="display: block; height: auto;"><div class="darkimageWrapper" style="mso-hide: all; display: none"><img src="/img/nginx_logo_dark.png" alt="NGINX" class="darkimage" style="display: none;"></div></a></h1><div><ul class="mobilemenu"><li><a href="../../en/docs/contributing_changes.html">english</a></li><li>русский<br></li><li><br></li><li><a href="../../news.html">новости</a> [en]</li><li><a href="../../ru/">об nginx</a></li><li><a href="../../ru/download.html">скачать</a></li><li><a href="../../en/security_advisories.html">безопасность</a> [en]</li><li><a href="./">документация</a></li><li><a href="faq.html">faq</a></li><li><a href="../../en/books.html">книги</a> [en]</li><li><a href="../../ru/community.html">сообщество</a></li><li><a href="../../ru/enterprise.html">компания</a></li><li><br></li><li><a href="https://x.com/nginxorg">x.com</a></li><li><a href="https://blog.nginx.org/">blog</a></li><li><br></li><li><a href="https://unit.nginx.org/">unit</a></li><li><a href="njs/">njs</a></li></ul></div></nav></div><div id="content"><h2>Внесение изменений</h2><table width="100%"><tr><td align="left"><a href="#getting_sources">Получение исходного кода</a><br><a href="#formatting_changes">Оформление изменений</a><br><a href="#before_submitting">Перед отправкой</a><br><a href="#submitting_changes">Отправка изменений</a><br><a href="#website">Веб-сайт</a><br><a href="#license">Лицензия</a><br></td></tr></table><a name="getting_sources"></a><center><h4>Получение исходного кода</h4></center><p>
+Для хранения исходного кода используется
+<a href="https://github.com">GitHub</a>.
+<a href="https://github.com/nginx/nginx">Репозиторий</a> можно клонировать
+следующей командой:
+</p> <blockquote class="example"><pre>
+git clone https://github.com/nginx/nginx.git
+</pre></blockquote><p> 
+</p><a name="formatting_changes"></a><center><h4>Оформление изменений</h4></center><p>
+Изменения должны быть оформлены согласно
+<a href="../docs/dev/development_guide.html#code_style">стилю</a>,
+принятому в nginx.
+В случае возникновения затруднений в оформлении
+изучите, как оформлен исходный код nginx, и следуйте этому стилю в своём коде.
+Изменения скорее будут приняты, если их стиль соответствует окружающему
+коду.
+</p><p>
+<a href="https://docs.github.com/ru/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits">Зафиксируйте</a>
+изменения в вашем ответвлении (fork) проекта.
+Пожалуйста, убедитесь, что адрес
+<a href="https://docs.github.com/ru/get-started/getting-started-with-git/setting-your-username-in-git">электронной
+почты</a> и настоящее имя автора изменения указаны правильно.
+</p><p>
+Сообщение фиксации должно содержать однострочное резюме и подробное описание
+после пустой строки.
+Желательно, чтобы первая строка была не длиннее 67 символов,
+остальные строки не длиннее 76 символов.
+Итоговый набор изменений может быть получен с помощью
+команды <code>git show</code>:
+</p> <blockquote class="example"><pre>
+commit 8597218f386351d6c6cdced24af6716e19a18fc3
+Author: Filipe Da Silva &lt;username@example.com&gt;
+Date:   Thu May 9 10:54:28 2013 +0200
+
+    Mail: removed surplus ngx_close_connection() call.
+
+    It is already called for a peer connection a few lines above.
+
+diff --git a/src/mail/ngx_mail_auth_http_module.c b/src/mail/ngx_mail_auth_http_module.c
+index 2e9b9f24d..8094bbc5c 100644
+--- a/src/mail/ngx_mail_auth_http_module.c
++++ b/src/mail/ngx_mail_auth_http_module.c
+@@ -699,7 +699,6 @@ ngx_mail_auth_http_process_headers(ngx_mail_session_t *s,
+
+                     p = ngx_pnalloc(s-&gt;connection-&gt;pool, ctx-&gt;err.len);
+                     if (p == NULL) {
+-                        ngx_close_connection(ctx-&gt;peer.connection);
+                         ngx_destroy_pool(ctx-&gt;pool);
+                         ngx_mail_session_internal_server_error(s);
+                         return;
+</pre></blockquote><p> 
+</p><a name="before_submitting"></a><center><h4>Перед отправкой</h4></center><p>
+Несколько моментов, на которые следует обратить внимание перед
+отправкой изменения:
+</p> <ul class="compact">
+
+<li>
+Предлагаемые изменения должны корректно работать на всех
+<a href="../index.html#tested_os_and_platforms">поддерживаемых
+платформах</a>.
+</li>
+
+<li>
+Постарайтесь разъяснить, почему предлагаемое изменение нужно, и, если возможно,
+опишите вариант использования.
+</li>
+
+<li>
+Проверка изменений при помощи специального набора тестов позволит убедиться,
+что они не вызывают регрессию.
+<a href="https://github.com/nginx/nginx-tests">Репозиторий</a> с тестами
+можно клонировать следующей командой:
+<blockquote class="example"><pre>
+git clone https://github.com/nginx/nginx-tests.git
+</pre></blockquote>
+</li>
+
+</ul><p> 
+</p><a name="submitting_changes"></a><center><h4>Отправка изменений</h4></center><p>
+Предлагаемые изменения следует отправлять из вашего ответвления проекта в
+исходный <a href="https://github.com/nginx/nginx">репозиторий</a> как
+<a href="https://docs.github.com/ru/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork">pull request</a>.
+</p><a name="website"></a><center><h4>Веб-сайт</h4></center><p>
+Для хранения исходных файлов этого веб-сайта также используется GitHub.
+<a href="https://www.github.com/nginx/nginx.org">Репозиторий</a>
+можно клонировать следующей командой:
+</p> <blockquote class="example"><pre>
+https://github.com/nginx/nginx.org.git
+</pre></blockquote><p> 
+Предлагаемые изменения следует отправлять из вашего ответвления проекта
+как pull request.
+</p><a name="license"></a><center><h4>Лицензия</h4></center><p>
+Отправка изменений подразумевает предоставление проекту права на их
+использование под соответствующей <a href="../../LICENSE">лицензией</a>.
+</p></div></div></body></html>
